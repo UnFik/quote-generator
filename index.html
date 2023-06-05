@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Advice generator app</title>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'light-cyan': '#cee3e9',
+            'neon-green': '#52ffa8',
+
+            'grayish-blue': '#4e5d73',
+            'dark-grayish-blue': '#323a49',
+            'dark-blue': '#1f2632'
+          }
+        }
+      }
+    }
+//     ### Primary
+
+//         - Light Cyan: hsl(193, 38 %, 86 %)
+//           - Neon Green: hsl(150, 100 %, 66 %)
+
+// ### Neutral
+
+//         - Grayish Blue: hsl(217, 19 %, 38 %)
+//           - Dark Grayish Blue: hsl(217, 19 %, 24 %)
+//             - Dark Blue: hsl(218, 23 %, 16 %)
+  </script>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    * {
+      font-family: 'Manrope', sans-serif;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    .btn-dice:active{
+      box-shadow: 0px 0px 30px 8px #52ffa8;
+      border: none;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen grid place-items-center bg-dark-blue">
+  <div class="card bg-dark-grayish-blue lg:w-4/12 w-11/12 pb-12 rounded-md px-8 relative drop-shadow-xl">
+    <div class="text-center py-5 text-neon-green font-extrabold tracking-widest">Advice #<span id="index"></span><!-- Advice ID goes here -->
+    </div>
+
+    <div class="text-white font-extrabold text-lg text-center mt-5" id="quote">
+      "Loading..."
+    </div>
+    <img src="images/pattern-divider-mobile.svg" alt="" class="mt-10 w-full lg:hidden">
+    <img src="images/pattern-divider-desktop.svg" alt="" class="mt-10 w-full lg:flex hidden">
+    <button class="btn-dice flex justify-center items-center bg-neon-green w-12 h-12 rounded-full absolute left-0 right-0 mx-auto bottom-[-10%]" onclick="javascript:window.location.reload(true)">
+      <img src="images/icon-dice.svg" alt="" class="">
+    </button>
+  </div>
+
+  <script src="script/main.js"></script>
+</body>
+
+</html>
