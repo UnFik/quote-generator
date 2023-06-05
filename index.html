@@ -7,12 +7,12 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Advice generator app</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -28,16 +28,6 @@
         }
       }
     }
-//     ### Primary
-
-//         - Light Cyan: hsl(193, 38 %, 86 %)
-//           - Neon Green: hsl(150, 100 %, 66 %)
-
-// ### Neutral
-
-//         - Grayish Blue: hsl(217, 19 %, 38 %)
-//           - Dark Grayish Blue: hsl(217, 19 %, 24 %)
-//             - Dark Blue: hsl(218, 23 %, 16 %)
   </script>
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -63,11 +53,11 @@
 
 <body class="min-h-screen grid place-items-center bg-dark-blue">
   <div class="card bg-dark-grayish-blue lg:w-4/12 w-11/12 pb-12 rounded-md px-8 relative drop-shadow-xl">
-    <div class="text-center py-5 text-neon-green font-extrabold tracking-widest">Advice #<span id="index"></span><!-- Advice ID goes here -->
+    <div class="text-center py-5 text-neon-green font-extrabold tracking-[0.3em] uppercase">Advice #<span id="index"></span><!-- Advice ID goes here -->
     </div>
 
-    <div class="text-white font-extrabold text-lg text-center mt-5" id="quote">
-      "Loading..."
+    <div class="text-light-cyan grayish-blue font-extrabold text-xl text-center mt-5">
+      "<span id="quote">Loading</span>"
     </div>
     <img src="images/pattern-divider-mobile.svg" alt="" class="mt-10 w-full lg:hidden">
     <img src="images/pattern-divider-desktop.svg" alt="" class="mt-10 w-full lg:flex hidden">
